@@ -1,50 +1,30 @@
 # ra
 
-FIXME: description
+Possible bug in Ring Async Jetty Adapter?
 
 ## Installation
 
-Download from http://example.com/FIXME.
+git clone this repo.
 
 ## Usage
-
-FIXME: explanation
 
 Run the project directly:
 
     $ boot run
 
-Run the project's tests (they'll fail until you edit them):
+Then hit the app in a browser:
 
-    $ boot test
+    http://localhost:8080/
 
-Build an uberjar from the project:
+It should say `Yes please!`. Now append `?fail=msg` to the URL to cause it to raise an exception.
 
-    $ boot build
+You'll get an Error 500 (as expected).
 
-Run the uberjar:
-
-    $ java -jar target/ra-0.1.0-SNAPSHOT-standalone.jar [args]
-
-## Options
-
-FIXME: listing of options this app accepts.
-
-## Examples
-
-...
-
-### Bugs
-
-...
-
-### Any Other Sections
-### That You Think
-### Might be Useful
+All future requests fail -- they hang and then thread death exception is reported at the console.
 
 ## License
 
-Copyright © 2017 FIXME
+Copyright © 2017 Sean Corfield
 
 Distributed under the Eclipse Public License either version 1.0 or (at
 your option) any later version.
